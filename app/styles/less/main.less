@@ -1,8 +1,258 @@
-p {
-	color: red;
-	background: #fff;
+@import 'base.less';
+@import 'skeleton.less';
+
+@sans: 'Open Sans', Helvetica, Arial, sans-serif;
+@orange: #e78f13;
+/*@blue: #4a79bf;*/
+@orange-light: lighten(@orange, 30%);
+@blue: #6699cc;
+@blue-dark: darken(@blue, 20%); 
+@blue-light: lighten(@blue, 30%);
+@gray: #aaa;
+@gray-light: #eee;
+
+p,h1,h2,h3,h4,h5,li,a {
+	font-family: @sans;
+	color: #666;
 }
 
-h1 {
-	color: red;
+a {
+	color: @orange;
+	font-weight: 700;
+	text-decoration: none;
 }
+
+a.buttonLink {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	font-weight: 700;
+	background: @orange;
+	color: #fff;
+	border-radius: 4px;
+}
+
+
+
+/*homepage*/
+
+.header {
+	height: 100%;
+	overflow: hidden;
+	border-bottom: 2px solid #ccc;
+	.logo {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		float: left;
+		padding: 0.5em 0 0.25em .75em;
+		img {
+			max-width: 315px;
+		}
+	}
+	.nav {
+		float: right;
+		margin: 2.5em 0 0 0;
+		li {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			float: left;
+			margin: 0 1em;
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.hero {
+	.container {
+		.row {
+			margin: 2em 0 0 0;
+			.highlight {
+				margin-top: 2em;
+				font-size: 1.2em;
+				height: 100%;
+				overflow: hidden;
+				margin-bottom: 1em;
+				.tagline {
+					font-weight: 800;
+					color: @blue-dark;
+				}
+				.subtagline {
+					font-weight: 400;
+				}
+				.learnMore {
+					margin-top: 1.5em;
+					text-align: left;
+				}
+			}
+			.theresa {
+				text-align: center;
+				img {
+					width: 100%;
+					max-width: 340px;
+					vertical-align: bottom;
+				}
+			}
+		}
+	}
+}
+.features {
+	/*border-top: 2px solid #ccc;*/
+	padding-top: 2em;
+	background: @gray-light;
+	.box {
+		padding: 1em 1em;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		h3 {
+			text-align: center;
+			color: #333;
+			font-weight: 700;
+		}
+		p {
+			text-align: center;
+			color: #444;
+		}
+		p.icon {
+			img {
+				width: 40%;
+			}
+		}
+	}
+}
+
+.clients {
+	padding-top: 2em;
+	.quote {
+		h3 {
+			text-align: center;
+			color: @blue-dark;
+			font-weight: 800;
+		}
+		p {
+			text-align: center;
+			font-size: 1.2em;
+			line-height: 1.6;
+		}
+	}
+	.company {
+		text-align: center;
+		img {
+			width: 100%;
+			max-width: 200px;
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			filter: grayscale(100%);
+			&:hover {
+				-webkit-filter: grayscale(0%);
+				-moz-filter: grayscale(0%);
+				filter: grayscale(0%);
+			}
+		}
+	}
+}
+
+.bottom {
+	background: @gray-light;
+	padding: 6em 0 4em 0;
+	p {
+		text-align: center;
+		font-size: 1.5em;
+	}
+}
+
+/* #Media Queries
+================================================== */
+ 
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		.hero {
+			.container {
+				.row {
+					.highlight {
+						margin-top: 0em;
+						.tagline {
+							font-size: 1.8em;
+							text-align: center;
+						}
+						.subtagline {
+							font-size: 1.2em;
+							text-align: center;
+						}
+						p.learnMore {
+							text-align: center;
+						}
+					}
+					.theresa {
+						img {
+							max-width: 240px;
+						}
+					}
+				}
+			}
+		}
+		.header {
+			.logo {
+				text-align: left;
+				float: none;
+				padding:0.5em;
+				img {
+					width: 100%;
+				}
+			}
+			.nav {
+				float: none;
+				width: 100%;
+				padding: 0 0 1.25em 0;
+				margin: 0.5em 0;
+				li {
+					width: 25%;
+					margin: 0;
+					text-align: center;
+				}
+			}
+		}
+		.clients {
+			.quote {
+				h3 {
+					font-size: 1.8em;
+				}
+			}
+		}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		.hero {
+			.container {
+				.row {
+					.highlight {
+						.tagline {
+							font-size: 1.3em;
+						}
+						.subtagline {
+							font-size: 0.9em;
+						}
+					}
+				}
+			}
+		}
+		.bottom {
+			p {
+				font-size: 1em;
+			}
+		}
+	}

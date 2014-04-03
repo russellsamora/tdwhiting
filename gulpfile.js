@@ -4,11 +4,14 @@
 var gulp = require('gulp');
 var path = require('path');
 var express = require('express');
+var fs = require('fs');
 
 // Load plugins
 var $ = require('gulp-load-plugins')();
 
 var LIVERELOAD_PORT = 35727;
+
+var partialPath = __dirname + '/app/';
 
 // Styles
 gulp.task('styles', function () {
@@ -45,8 +48,12 @@ gulp.task('html', function () {
 
 //Mustache
 gulp.task('stache', function() {
+    // fs.readFile(partialPath + 'nav.html', function (err, data) {
+    //     if (err) throw err;
+    //     var s = data.toString();
+    // });
     return gulp.src('app/html/*.mustache')
-        .pipe($.mustache())
+        .pipe($.mustache({},{}, {} ))
         .pipe(gulp.dest('app'));
 });
 
@@ -74,9 +81,7 @@ gulp.task('bundle', ['styles', 'scripts'], $.bundle('./app/*.html'));
 gulp.task('build', ['html', 'bundle', 'images']);
 
 // Default task
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
-});
+gulp.task('default', ['clean','watch']);
 
 // Connect
 gulp.task('connect', $.connect.server({
