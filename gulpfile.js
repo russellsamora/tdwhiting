@@ -13,9 +13,9 @@ var LIVERELOAD_PORT = 35727;
 
 var partialPath = __dirname + '/app/';
 
-// Styles
-gulp.task('styles', function () {
-    // return gulp.src('app/styles/main.scss')
+// Less
+gulp.task('less', function () {
+    // return gulp.src('app/css/main.scss')
     //     .pipe($.rubySass({
     //       style: 'expanded',
     //       loadPath: ['app/bower_components']
@@ -23,11 +23,18 @@ gulp.task('styles', function () {
     //     .pipe($.autoprefixer('last 1 version'))
     //     .pipe(gulp.dest('app/styles'))
     //     .pipe($.size());
-    return gulp.src('app/styles/less/*.less')
+    return gulp.src('app/css/less/*.less')
         .pipe($.less({
             paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
-        .pipe(gulp.dest('app/styles'));
+        .pipe(gulp.dest('app/css'));
+});
+
+gulp.task('styles', function() {
+    return gulp.src('app/css/*.css')
+        .pipe($.csso())
+        .pipe($.size())
+        .pipe(gulp.dest('dist/css'));
 });
 
 // Scripts
@@ -40,7 +47,7 @@ gulp.task('scripts', function () {
 
 // HTML
 gulp.task('html', function () {
-    return gulp.src('app/*.html')
+    return gulp.src('app/**/*.html')
       .pipe($.useref())
       .pipe(gulp.dest('dist'))
       .pipe($.size());
@@ -52,7 +59,7 @@ gulp.task('stache', function() {
     //     if (err) throw err;
     //     var s = data.toString();
     // });
-    return gulp.src('app/html/*.mustache')
+    return gulp.src('app/html/**/*.mustache')
         .pipe($.mustache({},{}, {} ))
         .pipe(gulp.dest('app'));
 });
@@ -71,14 +78,14 @@ gulp.task('images', function () {
 
 // Clean
 gulp.task('clean', function () {
-    return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], {read: false}).pipe($.clean());
+    return gulp.src(['dist/css', 'dist/scripts', 'dist/images'], {read: false}).pipe($.clean());
 });
 
 // Bundle
 gulp.task('bundle', ['styles', 'scripts'], $.bundle('./app/*.html'));
 
-// Build
-gulp.task('build', ['html', 'bundle', 'images']);
+// Deploy
+gulp.task('deploy', ['html', 'bundle', 'images']);
 
 // Default task
 gulp.task('default', ['clean','watch']);
@@ -97,7 +104,7 @@ gulp.task('watch', function () {
     startLivereload();
     
     // Watch .less files
-    gulp.watch('app/styles/less/*.less', ['styles']);
+    gulp.watch('app/css/less/*.less', ['less']);
     
     // Watch .js files
     gulp.watch('app/scripts/*.js', ['scripts']);
@@ -106,12 +113,12 @@ gulp.task('watch', function () {
     gulp.watch('app/images/*', ['images']);
 
     // watch mustache
-    gulp.watch('app/html/*', ['stache']);
+    gulp.watch('app/html/**/*', ['stache']);
 
     // Watch for changes in `app` folder
     gulp.watch([
         'app/*.html',
-        'app/styles/*.css',
+        'app/css/*.css',
         'app/scripts/**/*.js',
         'app/images/**/*'
     ], notifyLivereload);

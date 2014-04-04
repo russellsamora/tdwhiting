@@ -1,0 +1,168 @@
+@import 'variables.less';
+
+/*homepage*/
+.hero {
+	.container {
+		.row {
+			.highlight {
+				margin-top: 2em;
+				font-size: 1.2em;
+				height: 100%;
+				overflow: hidden;
+				margin-bottom: 1em;				
+				.subtagline {
+					font-weight: 400;
+				}
+				.learnMore {
+					margin-top: 1.5em;
+					text-align: left;
+				}
+			}
+			.theresa {
+				text-align: center;
+				img {
+					width: 100%;
+					max-width: 340px;
+					vertical-align: bottom;
+				}
+			}
+		}
+	}
+}
+
+.features {
+	/*border-top: 2px solid #ccc;*/
+	padding: 3em 0;
+	background: @gray-light;
+	.box {
+		padding: 1em 1em;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		h3 {
+			text-align: center;
+			color: #333;
+			font-weight: 700;
+		}
+		p {
+			text-align: center;
+			color: #444;
+		}
+		p.icon {
+			img {
+				width: 40%;
+			}
+		}
+	}
+}
+
+.clients {
+	padding: 3em 0;
+	.quote {
+		h3 {
+			text-align: center;
+			color: @blue-dark;
+			font-weight: 800;
+		}
+		p {
+			text-align: center;
+			font-size: 1.2em;
+			line-height: 1.6;
+		}
+	}
+	.company {
+		text-align: center;
+		img {
+			width: 100%;
+			max-width: 200px;
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			filter: grayscale(100%);
+			&:hover {
+				-webkit-filter: grayscale(0%);
+				-moz-filter: grayscale(0%);
+				filter: grayscale(0%);
+			}
+		}
+	}
+}
+
+.bottom {
+	background: @gray-light;
+	padding: 6em 0 4em 0;
+	p {
+		text-align: center;
+		font-size: 1.5em;
+	}
+}
+
+/* #Media Queries
+================================================== */
+ 
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		.hero {
+			.container {
+				.row {
+					.highlight {
+						margin-top: 0em;
+						.headliner {
+							font-size: 1.8em;
+							text-align: center;
+						}
+						.subtagline {
+							font-size: 1.2em;
+							text-align: center;
+						}
+						p.learnMore {
+							text-align: center;
+						}
+					}
+					.theresa {
+						img {
+							max-width: 240px;
+						}
+					}
+				}
+			}
+		}
+		.clients {
+			.quote {
+				h3 {
+					font-size: 1.8em;
+				}
+			}
+		}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		.hero {
+			.container {
+				.row {
+					.highlight {
+						.headliner {
+							font-size: 1.2em;
+							line-height: 1.2;
+						}
+						.subtagline {
+							font-size: 0.9em;
+						}
+					}
+				}
+			}
+		}
+		.bottom {
+			p {
+				font-size: 1em;
+			}
+		}
+	}

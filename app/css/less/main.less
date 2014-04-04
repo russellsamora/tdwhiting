@@ -1,0 +1,110 @@
+@import 'base.less';
+@import 'skeleton.less';
+@import 'variables.less';
+
+p,h1,h2,h3,h4,h5,li,a {
+	font-family: @sans;
+	color: #666;
+}
+
+a {
+	color: @orange;
+	font-weight: 700;
+	text-decoration: none;
+	&:hover {
+		color: @orange-dark;
+	}
+	&:visited {
+		color: @orange;
+	}
+}
+
+h1.headliner {
+	font-size: 2.1em;
+	font-weight: 800;
+	color: @blue-dark;
+	text-transform: uppercase;
+}
+
+a.buttonLink {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	font-weight: 700;
+	background: @orange;
+	color: #fff;
+	border-radius: 4px;
+	&:hover {
+		background: @orange-dark;
+	}
+}
+
+.header {
+	height: 100%;
+	overflow: hidden;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 2em;
+	.logo {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		float: left;
+		padding: 0.5em 0 0.25em .75em;
+		img {
+			max-width: 315px;
+		}
+	}
+	.nav {
+		float: right;
+		margin: 2.5em 0 0 0;
+		li {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			float: left;
+			margin: 0 1em;
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+
+/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		.header {
+			.logo {
+				text-align: left;
+				float: none;
+				padding:0.5em;
+				img {
+					width: 100%;
+				}
+			}
+			.nav {
+				float: none;
+				width: 100%;
+				padding: 0 0 1.25em 0;
+				margin: 0.5em 0;
+				li {
+					width: 25%;
+					margin: 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}

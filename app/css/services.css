@@ -1,0 +1,7 @@
+.mainFocus {
+  font-weight: 700;
+}
+.secondaryFocus li {
+  list-style-type: disc;
+  margin: 0.25em 1.5em;
+}

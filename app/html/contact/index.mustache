@@ -1,0 +1,90 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Theresa Whiting: contact</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/contact.css">
+    </head>
+    <body>
+        <div class='header'>
+            <div class='logo'>
+                <a href='/'><img src='../images/logo_new.jpg'></a>
+            </div>
+            <ul class='nav'>
+                <li>
+                    <a href='/about'>About</a>
+                </li>
+                <li>
+                    <a href='/services'>Services</a>
+                </li>
+                <li>
+                    <a href='/events'>Events</a>
+                </li>
+                <li>
+                    <a href='/contact'>Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class='container'>
+            <div class='row'>
+                <div class='sixteen columns'>
+                    <h1 class='headliner'>Get in touch</h1>
+                    <p>
+                        Take the first step and get in touch.  Tell me a bit about yourself and what type of services you might be interested in.
+                    </p>
+                    <form id='contact' action='email.php'>
+                        <input class='email' type='email' name='email' maxlength='30' required placeholder='name@example.com (required)'>
+                        <input class='name' type='text' name='name' maxlength='24' placeholder='jane smith'>
+                        <input class='phone' type='text' name='phone' maxlength='24' placeholder='555-555-1234'>
+                        <textarea class='message' name='message' maxlength='400' placeholder='Enter your message here.'></textarea>
+                        <input class='submitButton' type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class='other'>
+            <p>
+                Office: 781-631-0663
+            </p>
+            <p>
+                Cell: 781-724-0091
+            </p>
+            <p>
+                Email: theresa [at] tdwhiting.com
+            </p>
+            <p>
+                Address: Whiting Consulting , One Fox Lane, Marblehead, MA 01945
+            </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type='text/javascript'>
+            (function() {
+                $('.submitButton').on('click', function(e) {
+                    e.preventDefault();
+                    var email = $('#contact .email').val();
+                    var name = $('#contact .name').val();
+                    var phone = $('#contact .phone').val();
+                    var message = $('#contact .message').val();
+                    $.get('../php/email.php', {email: email, name: name, phone: phone, message: message}, function(data) {
+                        if(data) {
+                            alert('Server error. Could not send message.')
+                        } else {
+                            $('#contact .email').val('');
+                            $('#contact .name').val('');
+                            $('#contact .phone').val('');
+                            $('#contact .message').val('');
+                        }
+                    });
+                    return false;
+                });
+            })();
+        </script>
+    </body>
+</html>

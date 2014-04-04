@@ -9,12 +9,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/home.css">
     </head>
     <body>
         <div class='header'>
             <div class='logo'>
-                <img src='images/logo_new.jpg'>
+                <a href='/'><img src='images/logo_new.jpg'></a>
             </div>
             <ul class='nav'>
                 <li>
@@ -27,7 +28,7 @@
                     <a href='/events'>Events</a>
                 </li>
                 <li>
-                    <a href='/Contact'>Contact</a>
+                    <a href='/contact'>Contact</a>
                 </li>
             </ul>
         </div>
@@ -36,10 +37,10 @@
                 <div class='row'>
                     <div class='two-thirds column'>
                         <div class='highlight'>
-                            <h2 class='tagline'>Communicating Success</h2>
+                            <h1 class='headliner'>Communicating Success</h1>
                             <h4 class='subtagline'>Get the tools you need to take your career to the next level with the seasoned executive coach Theresa Whiting.</h4>
                             <p class='learnMore'>
-                                <a class='buttonLink'>Find out how</a>
+                                <a href='services' class='buttonLink'>Find out how</a>
                             </p>
                         </div>
                     </div>
@@ -106,11 +107,10 @@
         <div class='bottom'>
             <div class='container'>
                 <div class='row'>
-                    <p><a hre='#' class='buttonLink'>Learn about our services</a></p>                        
+                    <p><a href='services' class='buttonLink'>Learn about our services</a></p>                        
                 </div>
             </div>
         </div>
-        <script src="bower_components/jquery/jquery.js"></script>
         <script>
             //TODO add analytics
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -120,9 +120,5 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
-
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
 </body>
 </html>
