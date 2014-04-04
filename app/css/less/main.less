@@ -26,6 +26,10 @@ h1.headliner {
 	text-transform: uppercase;
 }
 
+h3 {
+	color: @blue-dark;
+}
+
 a.buttonLink {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -39,6 +43,9 @@ a.buttonLink {
 	&:hover {
 		background: @orange-dark;
 	}
+}
+a.buttonLink.bigOne {
+	font-size: 1.5em;
 }
 
 .header {
@@ -68,6 +75,20 @@ a.buttonLink {
 				text-transform: uppercase;
 			}
 		}
+	}
+}
+
+.footer {
+	background: @blue-dark;
+	padding: 2em 0.5em;
+	text-align: center;
+	p {
+		color: #eee;
+		line-height: 1.2;
+	}
+	span {
+		color: @orange;
+		font-weight: 800;
 	}
 }
 

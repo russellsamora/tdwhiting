@@ -19,16 +19,16 @@
             </div>
             <ul class='nav'>
                 <li>
-                    <a href='/about'>About</a>
+                    <a href='../about'>About</a>
                 </li>
                 <li>
-                    <a href='/services'>Services</a>
+                    <a href='../services'>Services</a>
                 </li>
                 <li>
-                    <a href='/events'>Events</a>
+                    <a href='../events'>Events</a>
                 </li>
                 <li>
-                    <a href='/contact'>Contact</a>
+                    <a href='../contact'>Contact</a>
                 </li>
             </ul>
         </div>
@@ -45,22 +45,24 @@
                         <input class='phone' type='text' name='phone' maxlength='24' placeholder='555-555-1234'>
                         <textarea class='message' name='message' maxlength='400' placeholder='Enter your message here.'></textarea>
                         <input class='submitButton' type="submit" value="Send">
+                        <p class='messageSent'>Message sent.</p>
+                        <p class='messageFailed'>Server error. Message failed.</p>
                     </form>
                 </div>
             </div>
         </div>
-        <div class='other'>
+        <div class='footer'>
             <p>
-                Office: 781-631-0663
+                <span>Office:</span> 781-631-0663
             </p>
             <p>
-                Cell: 781-724-0091
+                <span>Cell:</span> 781-724-0091
             </p>
             <p>
-                Email: theresa [at] tdwhiting.com
+                <span>Email:</span> theresa [at] tdwhiting.com
             </p>
             <p>
-                Address: Whiting Consulting , One Fox Lane, Marblehead, MA 01945
+                <span>Address:</span> Whiting Consulting , One Fox Lane, Marblehead, MA 01945
             </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -72,14 +74,21 @@
                     var name = $('#contact .name').val();
                     var phone = $('#contact .phone').val();
                     var message = $('#contact .message').val();
-                    $.get('../php/email.php', {email: email, name: name, phone: phone, message: message}, function(data) {
+                    $.post('../php/email.php', {email: email, name: name, phone: phone, message: message}, function(data) {
                         if(data) {
-                            alert('Server error. Could not send message.')
+                            $('.messageFailed').show();
+                            setTimeout(function() {
+                                $('.messageFailed').fadeOut();
+                            }, 3000);
                         } else {
                             $('#contact .email').val('');
                             $('#contact .name').val('');
                             $('#contact .phone').val('');
                             $('#contact .message').val('');
+                            $('.messageSent').show();
+                            setTimeout(function() {
+                                $('.messageSent').fadeOut();
+                            }, 3000);
                         }
                     });
                     return false;

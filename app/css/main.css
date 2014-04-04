@@ -928,6 +928,9 @@ h1.headliner {
   color: #336699;
   text-transform: uppercase;
 }
+h3 {
+  color: #336699;
+}
 a.buttonLink {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -941,6 +944,9 @@ a.buttonLink {
 }
 a.buttonLink:hover {
   background: #b8720f;
+}
+a.buttonLink.bigOne {
+  font-size: 1.5em;
 }
 .header {
   height: 100%;
@@ -970,6 +976,19 @@ a.buttonLink:hover {
 .header .nav li a {
   text-decoration: none;
   text-transform: uppercase;
+}
+.footer {
+  background: #336699;
+  padding: 2em 0.5em;
+  text-align: center;
+}
+.footer p {
+  color: #eee;
+  line-height: 1.2;
+}
+.footer span {
+  color: #e78f13;
+  font-weight: 800;
 }
 /* Smaller than standard 960 (devices and browsers) */
 /* Tablet Portrait size to standard 960 (devices and browsers) */
