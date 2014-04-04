@@ -25,10 +25,10 @@
                     <a href='../services'>Services</a>
                 </li>
                 <li>
-                    <a href='../events'>Events</a>
+                    <a href='../contact'>Contact</a>
                 </li>
                 <li>
-                    <a href='../contact'>Contact</a>
+                    <a href='#blog'>Blog</a>
                 </li>
             </ul>
         </div>
@@ -37,13 +37,16 @@
                 <div class='sixteen columns'>
                     <h1 class='headliner'>Get in touch</h1>
                     <p>
-                        Take the first step and get in touch.  Tell me a bit about yourself and what type of services you might be interested in.
+                        We’d love to talk with you.  Tell us a bit about yourself and then we can discuss how we can work together to provide the best possible experience. 
+                    </p>
+                    <p>
+                        We look forward to the opportunity of working with you.
                     </p>
                     <form id='contact' action='email.php'>
+                        <input class='name' type='text' name='name' maxlength='24' placeholder='jane smith (required)' required>
                         <input class='email' type='email' name='email' maxlength='30' required placeholder='name@example.com (required)'>
-                        <input class='name' type='text' name='name' maxlength='24' placeholder='jane smith'>
                         <input class='phone' type='text' name='phone' maxlength='24' placeholder='555-555-1234'>
-                        <textarea class='message' name='message' maxlength='400' placeholder='Enter your message here.'></textarea>
+                        <textarea class='message' name='message' maxlength='400' placeholder='Inquiry here.'></textarea>
                         <input class='submitButton' type="submit" value="Send">
                         <p class='messageSent'>Message sent.</p>
                         <p class='messageFailed'>Server error. Message failed.</p>

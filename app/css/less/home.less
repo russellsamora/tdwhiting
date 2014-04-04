@@ -4,6 +4,7 @@
 .hero {
 	.container {
 		.row {
+			margin: 0;
 			.highlight {
 				margin-top: 2em;
 				font-size: 1.2em;
@@ -74,20 +75,11 @@
 		img {
 			width: 100%;
 			max-width: 200px;
-			-webkit-filter: grayscale(100%);
-			-moz-filter: grayscale(100%);
-			filter: grayscale(100%);
-			&:hover {
-				-webkit-filter: grayscale(0%);
-				-moz-filter: grayscale(0%);
-				filter: grayscale(0%);
-			}
 		}
 	}
 }
 
 .bottom {
-	background: @gray-light;
 	padding: 6em 0 4em 0;
 	p {
 		text-align: center;

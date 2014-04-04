@@ -1,5 +1,8 @@
 /*@sans: Helvetica, Arial, sans-serif;*/
 /*homepage*/
+.hero .container .row {
+  margin: 0;
+}
 .hero .container .row .highlight {
   margin-top: 2em;
   font-size: 1.2em;
@@ -63,17 +66,8 @@
 .clients .company img {
   width: 100%;
   max-width: 200px;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-.clients .company img:hover {
-  -webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
-  filter: grayscale(0%);
 }
 .bottom {
-  background: #eeeeee;
   padding: 6em 0 4em 0;
 }
 .bottom p {

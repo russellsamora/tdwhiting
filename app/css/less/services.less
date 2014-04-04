@@ -1,10 +1,47 @@
-.mainFocus {
-	font-weight: 700;
+@import 'variables.less';
+
+.service {
+	padding: 2em 0;
+	border-top: 1px dashed #ccc; 
+	.innerNav {
+		ul {
+			li {
+				text-transform: uppercase;
+				font-size: 0.8em;
+			}
+		}
+	}
+	.mainFocus {
+		p.first {
+			font-weight: 700;
+			font-size: 1.1em;
+			line-height: 1.4;
+		}
+		span {
+			font-weight: 800;
+			color: @blue-dark;
+		}
+	}
+	.secondaryFocus {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		padding: 1em;
+		background: @gray-light;
+		border-radius: 4px;
+		p {
+			span {
+				font-weight: 800;
+				color: @blue-dark;
+			}
+		}
+		li {
+			font-size: 0.9em;
+			list-style-type: disc;
+			margin: 0.25em 1.5em;
+		}
+	}
 }
-.secondaryFocus li {
-	list-style-type: disc;
-	margin: 0.25em 1.5em;
-}
+
 .getStarted {
 	padding: 2em 0;
 	text-align: center;
