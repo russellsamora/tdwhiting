@@ -9,18 +9,8 @@
   -moz-box-sizing: border-box;
   width: 100%;
 }
-#contact input.submitButton {
-  width: 100%;
-  background: #e78f13;
-  color: #fff;
-  font-size: 1.3em;
-  font-weight: 300;
-  font-family: $sans;
-  text-transform: uppercase;
-  border: none;
-}
-#contact input.submitButton:hover {
-  background: #b8720f;
+#contact .submitButton {
+  text-align: center;
 }
 #contact textarea {
   box-sizing: border-box;

@@ -997,7 +997,7 @@ a.buttonLink.bigOne {
   .header .logo {
     text-align: left;
     float: none;
-    padding: 0.5em;
+    padding: 0.5em 1em;
   }
   .header .logo img {
     width: 100%;
@@ -1012,6 +1012,9 @@ a.buttonLink.bigOne {
     width: 25%;
     margin: 0;
     text-align: center;
+  }
+  a.buttonLink.bigOne {
+    font-size: 1.2em;
   }
 }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */

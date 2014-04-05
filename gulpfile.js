@@ -88,7 +88,7 @@ gulp.task('bundle', ['styles', 'scripts'], $.bundle('./app/*.html'));
 gulp.task('deploy', ['html', 'bundle', 'images']);
 
 // Default task
-gulp.task('default', ['clean','watch']);
+gulp.task('default', ['clean', 'less', 'stache', 'watch']);
 
 // Connect
 gulp.task('connect', $.connect.server({
