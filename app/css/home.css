@@ -13,6 +13,10 @@
 .hero .container .row .highlight .subtagline {
   font-weight: 400;
 }
+.hero .container .row .highlight .explainer {
+  margin: 1.5em 0 2.5em 0;
+  font-size: 0.9em;
+}
 .hero .container .row .highlight .learnMore {
   margin-top: 1.5em;
   text-align: left;
@@ -28,34 +32,50 @@
 .features {
   /*border-top: 2px solid #ccc;*/
   padding: 3em 0;
-  background: #eeeeee;
+  background: #336699;
 }
 .features .box {
-  padding: 1em 1em;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
 .features .box h3 {
-  text-align: center;
-  color: #333;
+  color: #eee;
   font-weight: 700;
+  text-align: center;
+}
+.features .box p.quote {
+  font-weight: 300;
+  font-style: italic;
 }
 .features .box p {
-  text-align: center;
-  color: #444;
+  /*color: #444;*/
+  color: #fff;
 }
-.features .box p.icon img {
-  width: 40%;
+.features .box p img {
+  float: left;
+  width: 20%;
+  margin: 0 1em 1em 0;
+}
+.features .box p.last {
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 1em;
+}
+.features .box.right p.quote {
+  text-align: right;
+}
+.features .box.right p img {
+  float: right;
+  margin: 0 0 1em 1em;
 }
 .clients {
   padding: 3em 0;
 }
-.clients .quote h3 {
+.clients .testimony h3 {
   text-align: center;
   color: #336699;
   font-weight: 800;
 }
-.clients .quote p {
+.clients .testimony p {
   text-align: center;
   font-size: 1.2em;
   line-height: 1.6;
@@ -77,6 +97,11 @@
 ================================================== */
 /* Smaller than standard 960 (devices and browsers) */
 /* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .hero .container .row .theresa {
+    margin-top: 81px;
+  }
+}
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   .hero .container .row .highlight {

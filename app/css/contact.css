@@ -9,9 +9,6 @@
   -moz-box-sizing: border-box;
   width: 100%;
 }
-#contact .submitButton {
-  text-align: center;
-}
 #contact textarea {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -19,15 +16,29 @@
   width: 100%;
   height: 140px;
 }
-#contact .messageSent {
+.submitButton {
+  text-align: center;
+  margin-top: 2.5em;
+}
+.messageSent {
   text-align: center;
   color: #6699cc;
   font-weight: 700;
   display: none;
 }
-#contact .messageFailed {
+.messageFailed {
   text-align: center;
   color: red;
   font-weight: 700;
   display: none;
+}
+.social {
+  margin-top: 2em;
+  text-align: center;
+}
+.social h3 {
+  font-size: 1.4em;
+}
+.social img {
+  margin: 0.5em;
 }

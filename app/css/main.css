@@ -963,17 +963,24 @@ a.buttonLink.bigOne {
 .header .logo img {
   max-width: 315px;
 }
-.header .nav {
+.header .navContainer {
   float: right;
-  margin: 2.5em 0 0 0;
 }
-.header .nav li {
+.header .navContainer .phone {
+  text-align: right;
+  padding: 1em;
+  margin: 0;
+}
+.header .navContainer .nav {
+  margin: 0.25em 0 0 0;
+}
+.header .navContainer .nav li {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   float: left;
   margin: 0 1em;
 }
-.header .nav li a {
+.header .navContainer .nav li a {
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -1002,13 +1009,18 @@ a.buttonLink.bigOne {
   .header .logo img {
     width: 100%;
   }
-  .header .nav {
+  .header .navContainer {
     float: none;
+  }
+  .header .navContainer .phone {
+    display: none;
+  }
+  .header .navContainer .nav {
     width: 100%;
     padding: 0 0 1.25em 0;
     margin: 0.5em 0;
   }
-  .header .nav li {
+  .header .navContainer .nav li {
     width: 25%;
     margin: 0;
     text-align: center;
@@ -1019,3 +1031,8 @@ a.buttonLink.bigOne {
 }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .header .navContainer .nav li {
+    font-size: 0.8em;
+  }
+}

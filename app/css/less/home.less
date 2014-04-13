@@ -14,6 +14,10 @@
 				.subtagline {
 					font-weight: 400;
 				}
+				.explainer {
+					margin: 1.5em 0 2.5em 0;
+					font-size: 0.9em;
+				}
 				.learnMore {
 					margin-top: 1.5em;
 					text-align: left;
@@ -34,23 +38,42 @@
 .features {
 	/*border-top: 2px solid #ccc;*/
 	padding: 3em 0;
-	background: @gray-light;
+	background: @blue-dark;
 	.box {
-		padding: 1em 1em;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		h3 {
-			text-align: center;
-			color: #333;
+			color: #eee;
 			font-weight: 700;
+			text-align: center;
+		}
+		p.quote {
+			font-weight: 300;
+			font-style: italic;
 		}
 		p {
-			text-align: center;
-			color: #444;
-		}
-		p.icon {
+			/*color: #444;*/
+			color: #fff;
 			img {
-				width: 40%;
+				float: left;
+				width: 20%;
+				margin: 0 1em 1em 0;
+			}
+		}
+		p.last {
+			border-bottom: 1px dashed #eee;
+			padding-bottom: 1em;
+		}
+		
+	}
+	.box.right {
+		p.quote {
+			text-align: right;
+		}
+		p {
+			img {
+				float: right;
+				margin: 0 0 1em 1em;
 			}
 		}
 	}
@@ -58,7 +81,7 @@
 
 .clients {
 	padding: 3em 0;
-	.quote {
+	.testimony {
 		h3 {
 			text-align: center;
 			color: @blue-dark;
@@ -93,7 +116,17 @@
 	@media only screen and (max-width: 959px) {}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		.hero {
+			.container {
+				.row {
+					.theresa {
+						margin-top: 81px;
+					}
+				}
+			}
+		}
+	}
 
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {

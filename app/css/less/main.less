@@ -62,17 +62,24 @@ a.buttonLink.bigOne {
 			max-width: 315px;
 		}
 	}
-	.nav {
+	.navContainer {
+		.phone {
+			text-align: right;
+			padding: 1em;
+			margin: 0;
+		}
 		float: right;
-		margin: 2.5em 0 0 0;
-		li {
-			box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			float: left;
-			margin: 0 1em;
-			a {
-				text-decoration: none;
-				text-transform: uppercase;
+		.nav {
+			margin: 0.25em 0 0 0;
+			li {
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				float: left;
+				margin: 0 1em;
+				a {
+					text-decoration: none;
+					text-transform: uppercase;
+				}
 			}
 		}
 	}
@@ -110,15 +117,20 @@ a.buttonLink.bigOne {
 					width: 100%;
 				}
 			}
-			.nav {
+			.navContainer {
 				float: none;
-				width: 100%;
-				padding: 0 0 1.25em 0;
-				margin: 0.5em 0;
-				li {
-					width: 25%;
-					margin: 0;
-					text-align: center;
+				.phone {
+					display: none;
+				}
+				.nav {
+					width: 100%;
+					padding: 0 0 1.25em 0;
+					margin: 0.5em 0;
+					li {
+						width: 25%;
+						margin: 0;
+						text-align: center;
+					}
 				}
 			}
 		}
@@ -131,4 +143,14 @@ a.buttonLink.bigOne {
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+	@media only screen and (max-width: 479px) {
+		.header {
+			.navContainer {
+				.nav {
+					li {
+						font-size: 0.8em;
+					}
+				}
+			}
+		}
+	}
