@@ -32,6 +32,12 @@
   font-weight: 700;
   display: none;
 }
+.messageImage {
+  text-align: center;
+}
+.messageImage img {
+  max-width: 100%;
+}
 .social {
   margin-top: 2em;
   text-align: center;

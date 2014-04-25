@@ -32,12 +32,21 @@
   list-style-type: disc;
   margin: 0.25em 1.5em;
 }
+.service .secondaryFocus li span {
+  font-weight: 700;
+  color: #555555;
+}
 .service .secondaryImage {
   margin-bottom: 1em;
 }
 .service .secondaryImage img {
   width: 100%;
-  max-width: 320px;
+}
+.service .centerImage {
+  text-align: center;
+}
+.service .centerImage img {
+  max-width: 100%;
 }
 .getStarted {
   padding: 2em 0;

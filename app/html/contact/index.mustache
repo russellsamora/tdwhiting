@@ -18,7 +18,10 @@
                 <a href='/'><img src='../images/logo_new.jpg'></a>
             </div>
             <div class='navContainer'>
-                <p class='phone'>781-631-0663</p>
+                <div class='navSocial'>
+                    <a href='http://twitter.com/whitingwisdom' target='_blank'><img src='../images/social/twitter.jpg'></a>
+                    <a href='http://linkedin.com' target='_blank'><img src='../images/social/linkedin.jpg'></a>
+                </div>
                 <ul class='nav'>
                     <li>
                         <a href='../'>Home</a>
@@ -40,15 +43,20 @@
                 <div class='sixteen columns'>
                     <h1 class='headliner'>Get in touch</h1>
                     <p>
-                        We’d love to talk with you.  Tell us a bit about yourself and then we can discuss how we can work together to provide the best possible experience. 
+                        We'd love to talk with you. We can discuss how we can work together to provide the best possible experience.  Let us know when it would be convenient to have a conversation.
                     </p>
-                    <p>
+                    <p class='messageImage'>
+                        <img src='../images/other/message.png'>
+                    </p>
+                    <p class='messageImage'>
                         We look forward to the opportunity of working with you.
                     </p>
                     <form id='contact' action='email.php'>
                         <input class='name' type='text' name='name' maxlength='24' placeholder='jane smith (required)' required>
                         <input class='email' type='email' name='email' maxlength='30' required placeholder='name@example.com (required)'>
                         <input class='phone' type='text' name='phone' maxlength='24' placeholder='555-555-1234'>
+                        <input class='company' type='text' name='company' maxlength='24' placeholder='company'>
+                        <input class='website' type='text' name='website' maxlength='24' placeholder='company website'>
                         <textarea class='message' name='message' maxlength='400' placeholder='Inquiry here.'></textarea>
                     </form>
                     <p class='submitButton'><a href='#' class='buttonLink bigOne'>Send</a></p>
@@ -58,11 +66,10 @@
             </div>
             <div class='row'>
                 <div class='sixteen columns social'>
-                    <h3>Stay up to date by follownig us:</h3>
+                    <h3>Stay up to date by following us:</h3>
                     <p>
+                        <a href='http://twitter.com/whitingwisdom' target='_blank'><img src='../images/social/twitter.jpg'></a>
                         <a href='http://linkedin.com' target='_blank'><img src='../images/social/linkedin.jpg'></a>
-                        <a href='http://twitter.com' target='_blank'><img src='../images/social/twitter.jpg'></a>
-                        <a href='http://facebook.com' target='_blank'><img src='../images/social/facebook.jpg'></a>
                     </p>
                 </div>
             </div>
@@ -89,8 +96,10 @@
                     var email = $('#contact .email').val();
                     var name = $('#contact .name').val();
                     var phone = $('#contact .phone').val();
+                    var company = $('#contact .company').val();
+                    var website = $('#contact .website').val();
                     var message = $('#contact .message').val();
-                    $.post('../php/email.php', {email: email, name: name, phone: phone, message: message}, function(data) {
+                    $.post('../php/email.php', {email: email, name: name, phone: phone, company: company, website: website, message: message}, function(data) {
                         if(data) {
                             $('.messageFailed').show();
                             setTimeout(function() {
@@ -100,6 +109,8 @@
                             $('#contact .email').val('');
                             $('#contact .name').val('');
                             $('#contact .phone').val('');
+                            $('#contact .company').val('');
+                            $('#contact .website').val('');
                             $('#contact .message').val('');
                             $('.messageSent').show();
                             setTimeout(function() {

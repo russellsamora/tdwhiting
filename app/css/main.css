@@ -966,12 +966,17 @@ a.buttonLink.bigOne {
 .header .navContainer {
   float: right;
 }
-.header .navContainer .phone {
+.header .navContainer .navSocial {
   text-align: right;
   padding: 1em;
   margin: 0;
 }
+.header .navContainer .navSocial img {
+  margin-left: 0.5em;
+  width: 24px;
+}
 .header .navContainer .nav {
+  /*margin: 2.25em 0 0 0;*/
   margin: 0.25em 0 0 0;
 }
 .header .navContainer .nav li {
@@ -1012,7 +1017,8 @@ a.buttonLink.bigOne {
   .header .navContainer {
     float: none;
   }
-  .header .navContainer .phone {
+  .header .navContainer .navSocial {
+    /*text-align: center;*/
     display: none;
   }
   .header .navContainer .nav {
