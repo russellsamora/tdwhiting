@@ -48,3 +48,18 @@
 .social img {
   margin: 0.5em;
 }
+.explainer span,
+.numbers span {
+  font-weight: 700;
+  color: #336699;
+}
+.numbers {
+  /*p {
+		text-align: right;
+	}*/
+}
+@media only screen and (max-width: 760px) {
+  .numbers p {
+    text-align: center;
+  }
+}
