@@ -76,9 +76,12 @@
   font-weight: 800;
 }
 .clients .testimony p {
-  text-align: center;
+  text-align: left;
   font-size: 1.2em;
   line-height: 1.6;
+}
+.clients .testimony p span {
+  font-weight: 700;
 }
 .clients .company {
   text-align: center;

@@ -27,3 +27,18 @@ h1 {
 .social img {
   margin: 0.5em;
 }
+.specialBackground {
+  padding: 2em;
+  background: #6699cc;
+}
+.testimony {
+  color: #fff;
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  line-height: 1.4;
+  /*font-style: italic;*/
+}
+.testimony span {
+  font-weight: 700;
+}

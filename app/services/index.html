@@ -44,8 +44,8 @@
                     <h1 class='headliner'>Services</h1>
                 </div>
             </div>
-            <div class='row service'>
-                <div class='three columns innerNav'>
+            <div class='row extraBottom'>
+                <div class='five columns innerNav'>
                     <ul>
                         <li>
                             <a href='#executiveCoacing'>Executive coaching</a>
@@ -64,7 +64,33 @@
                         </li>
                     </ul>
                 </div>
-                <div class='eight columns mainFocus' id='executiveCoaching'>
+                <div class='eleven columns'>
+                    <div id='vimeo'>
+                        <iframe src="//player.vimeo.com/video/94759153?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="940" height="529" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class='row service'>
+                <!-- <div class='three columns innerNav'>
+                    <ul>
+                        <li>
+                            <a href='#executiveCoacing'>Executive coaching</a>
+                        </li>
+                        <li>
+                            <a href='#careerCoaching'>Career coaching</a>
+                        </li>
+                        <li>
+                            <a href='#communicationSkillsTraining'>Presentation skills and communcation training</a>
+                        </li>
+                        <li>
+                            <a href='#executivePresenceTraining'>Executive presence training</a>
+                        </li>
+                        <li>
+                            <a href='#speakingEngagements'>Speaking engagements</a>
+                        </li>
+                    </ul>
+                </div> -->
+                <div class='ten columns mainFocus' id='executiveCoaching'>
                     <h3>Executive coaching</h3>
                     <p class='first'>
                         Executive coaching creates a trusting and collaborative environment in which personal development and performance improvement occur.  It establishes a real, self-perception of current professional behavior and the impact it has on self, the organization and others.
@@ -76,7 +102,7 @@
                         <span>360&deg; Feedback:</span> Whiting Consulting has a unique process that eliminates the use of computer-generated questionnaires.  Theresa conducts personal interviews with direct reports, colleagues and managers, which result in a formalized feedback summary document to the client.  The summary includes general comments, leadership style, communication effectiveness, recommendation and action plan.
                     </p>
                 </div>
-                <div class='five columns'>
+                <div class='six columns'>
                     <div class='secondaryImage'>
                         <img src='../images/other/executive_coaching.jpg'>
                     </div>
@@ -98,7 +124,7 @@
             </div>
 
             <div class='row service' id='careerCoaching'>
-                <div class='eight columns offset-by-three mainFocus'>
+                <div class='ten columns mainFocus'>
                     <h3>Career coaching</h3>
                     <p class='first'>
                         Career coaching provides significant value and answers to finding a career that works for you. Learn how to choose or change your career for a lifetime of satisfaction and success. Often we find ourselves questioning what we want to do for a living, but we don't know where to start.
@@ -107,7 +133,7 @@
                         <span>Approach:</span> We utilize a tool that targets how you habitually take action, make decisions, and view others. Career coaching creates an environment for you to take inventory on your current job, finances, goals, strategy, resume, and overall professional choices for the future.
                     </p>
                 </div>
-                <div class='five columns secondaryFocus'>
+                <div class='six columns secondaryFocus'>
                     <p>
                         <span>Benefits:</span>
                         <ul>
@@ -125,7 +151,7 @@
             </div>
 
             <div class='row service' id='communicationSkillsTraining'>
-                <div class='eight columns offset-by-three mainFocus'>
+                <div class='ten columns mainFocus'>
                     <h3>Presentation skills and communication training</h3>
                     <p class='first'>
                         Having adequate knowledge of a subject matter does not equate to communicating effectively. Your knowledge remains dormant, unless you feel comfortable, and confident with yourself, your material and your audience. Presentation, and communication skills training is vital for success.
@@ -137,7 +163,7 @@
                         <span>Communication skills = building relationships:</span> Assimilate the 10 Steps to effective communication as part of your daily performance plan. Engage your clients and eliminate barriers to success with tools to strengthen your content and delivery.
                     </p>
                 </div>
-                <div class='five columns secondaryFocus'>
+                <div class='six columns secondaryFocus'>
                     <p>
                         <span>Benefits:</span>
                         <ul>
@@ -156,7 +182,7 @@
             </div>
 
             <div class='row service' id='executivePresenceTraining'>
-                <div class='eight columns offset-by-three mainFocus'>
+                <div class='ten columns mainFocus'>
                     <h3>Executive presence training</h3>
                     <p class='first'>
                         Learn the ten steps to executive presence and acheive that new job, new promotion, and career that you deserve.
@@ -165,7 +191,7 @@
                         How do you show up? Executive presence is confidence, competence, and credibility under pressure, as well as under normal business conditions. Personal attributes, knowledge, skills and experience are simply the foundation to how you are perceived.
                     </p>
                 </div>
-                <div class='five columns secondaryFocus'>
+                <div class='six columns secondaryFocus'>
                     <p>
                         <span>Benefits:</span>
                         <ul>
@@ -182,7 +208,7 @@
             </div>
 
             <div class='row service' id='speakingEngagements'>
-                <div class='eight columns offset-by-three mainFocus'>
+                <div class='ten columns mainFocus'>
                     <h3>Speaking engagements</h3>
                     <p class='first'>
                         Too much technology can and has depersonalized many of our relationships by taking the place of live, intimate and engaging conversations.  
@@ -197,7 +223,7 @@
                         <img src='../images/clients/engagements.jpg'>
                     </p>
                 </div>
-                <div class='five columns secondaryFocus'>
+                <div class='six columns secondaryFocus'>
                     <p>
                         <span>Sample topics:</span>
                         <ul>
@@ -232,5 +258,94 @@
                 <span>Address:</span> Whiting Consulting , One Fox Lane, Marblehead, MA 01945
             </div>
         </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type='text/javascript'>
+            $(function() {
+                $("#vimeo").fitVids(); 
+            });
+
+            /*global jQuery */
+            /*jshint browser:true */
+            /*!
+            * FitVids 1.1
+            *
+            * Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+            * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+            * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+            *
+            */
+
+            (function( $ ){
+
+
+            $.fn.fitVids = function( options ) {
+                var settings = {
+                  customSelector: null,
+                  ignore: null,
+                };
+
+                if(!document.getElementById('fit-vids-style')) {
+                  // appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
+                  var head = document.head || document.getElementsByTagName('head')[0];
+                  var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
+                  var div = document.createElement('div');
+                  div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
+                  head.appendChild(div.childNodes[1]);
+                }
+
+                if ( options ) {
+                  $.extend( settings, options );
+                }
+
+                return this.each(function(){
+                  var selectors = [
+                    "iframe[src*='player.vimeo.com']",
+                    "iframe[src*='youtube.com']",
+                    "iframe[src*='youtube-nocookie.com']",
+                    "iframe[src*='kickstarter.com'][src*='video.html']",
+                    "object",
+                    "embed"
+                  ];
+
+                  if (settings.customSelector) {
+                    selectors.push(settings.customSelector);
+                  }
+
+                  var ignoreList = '.fitvidsignore';
+
+                  if(settings.ignore) {
+                    ignoreList = ignoreList + ', ' + settings.ignore;
+                  }
+
+                  var $allVideos = $(this).find(selectors.join(','));
+                  $allVideos = $allVideos.not("object object"); // SwfObj conflict patch
+                  $allVideos = $allVideos.not(ignoreList); // Disable FitVids on this video.
+
+                  $allVideos.each(function(){
+                    var $this = $(this);
+                    if($this.parents(ignoreList).length > 0) {
+                      return; // Disable FitVids on this video.
+                    }
+                    if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+                    if ((!$this.css('height') && !$this.css('width')) && (isNaN($this.attr('height')) || isNaN($this.attr('width'))))
+                    {
+                      $this.attr('height', 9);
+                      $this.attr('width', 16);
+                    }
+                    var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
+                        width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
+                        aspectRatio = height / width;
+                    if(!$this.attr('id')){
+                      var videoID = 'fitvid' + Math.floor(Math.random()*999999);
+                      $this.attr('id', videoID);
+                    }
+                    $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+                    $this.removeAttr('height').removeAttr('width');
+                  });
+                });
+              };
+            // Works with either jQuery or Zepto
+            })( window.jQuery || window.Zepto );
+        </script>
     </body>
 </html>

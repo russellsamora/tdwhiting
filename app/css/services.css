@@ -1,4 +1,11 @@
 /*@sans: Helvetica, Arial, sans-serif;*/
+/*#vimeo {
+	max-width: 720px;
+	margin: 0 auto;
+}*/
+.extraBottom {
+  padding-bottom: 2em;
+}
 .service {
   padding: 2em 0;
   border-top: 1px dashed #ccc;
