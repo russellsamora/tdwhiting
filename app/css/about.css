@@ -15,6 +15,9 @@ h1 {
   min-width: 120px;
   margin: 0.4em 1em 0.5em 0;
 }
+.clients {
+  margin-top: 3em;
+}
 .clients img {
   margin: 1em 0;
   width: 100%;
@@ -28,10 +31,10 @@ h1 {
   margin: 0.5em;
 }
 .specialBackground {
-  padding: 2em;
   background: #6699cc;
 }
 .testimony {
+  padding: 2em;
   color: #fff;
   max-width: 640px;
   margin: 0 auto;
